@@ -11,7 +11,23 @@
 */
 
 function bubbleSort(nums) {
-  // code goes here
+  let sorted = false
+  while (!sorted) {
+    let changed = false
+    for (let i = 0; i < nums.length - 1; i++) {
+      if (nums[i] > nums[i + 1]) {
+
+        const before = nums[i]
+        nums[i] = nums[i + 1]
+        nums[i + 1] = before
+        changed = true
+      }
+    }
+    if (changed == false) {
+      break
+    }
+  }
+  return nums
 }
 
 // unit tests
